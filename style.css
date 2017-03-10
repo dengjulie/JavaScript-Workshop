@@ -145,29 +145,28 @@ a {
   -moz-transform: translateX(-50%) translateY(-50%);
  	transform: translateX(-50%) translateY(-50%);
   overflow: hidden;
+  top: 400px;
 }
 #box1 {
-  top: 400px;
   left: 15%;
 }
 #box2 {
-  top: 400px;
   left: 30%;
 }
 #box3 {
-  top: 400px;
   left: 45%;
 }
 #box4 {
-  top: 400px;
   left: 60%;
 }
 #box5 {
-  top: 400px;
   left: 75%;
 }
+.box-color {
+  background-color: pink;
+}
 .box-shifted {
-  top:500px;
+  top: 500px;
 }
 /* Add CSS classes for jQuery here!*/
 

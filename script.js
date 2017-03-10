@@ -8,6 +8,7 @@ $(document).ready(function() {
   // For this set of activities, we will be manipulating #box1, #box2, #box3, #box4, #box5
   // Once we select the class or id name that we want to manipulate, we can call a function on it
   // Syntax reminders: use semicolons at the end of functions!
+  //
   // Example (uncomment the following):
   // $(".text").css("color", "yellow");
 
@@ -22,6 +23,8 @@ $(document).ready(function() {
 
 
   // ACTIVITY 2:
+  // Modify the box-shifted class as desired
+  // Important: the id's characteristics always override any of the classes' characteristics (see this by trying to modify left)
   $('#box2').click(function() {
     $('#box2').toggleClass('box-shifted');
   })
@@ -29,17 +32,36 @@ $(document).ready(function() {
   // ACTIVITY 3:
   // alternatively, use the if-else clause
   // can include more functions to be called upon clicking
-  $('#box2').click(function() {
-    if ($('#box2').hasClass('box-shifted')) {
-      $('#box2').addClass('box-shifted');
-    } else {
-      $('#box2').removeClass('box-shifted');
+  // toggle the class .box-color on #box3 using hasClass, removeClass, and addClass
+  // use .show() and .hide() on box4 as well within the if-else clause
+  $('#box3').click(function() {
+    if ($('#box3').hasClass('box-color')) {
+      $('#box3').removeClass('box-color');
+      $('#box4').show();
+    }
+    else {
+      $('#box3').addClass('box-color');
+      $('#box4').hide();
     }
   })
 
-  // use .hide and .show
+  // ACTIVITY 4:
+  // use animate!
+  // first parameter is css, second arameter is time of transition
+  // can control time of transition
+  // use setTimeout to make events happen at different times
+  //using animate will override id characteristics (try modifying left!)
 
-  //ACTIVITY 4: Show and hide the sidebar
+  $('#box5').click(function() {
+    $('#box5').animate({height: '300px', left: '50%'}, 200);
+    setTimeout(function() {
+      $('#box5').animate({height: '100px', left: '75%'}, 200);
+    })
+  })
+
+
+
+  //ACTIVITY 5: Show and hide the sidebar
   //Hint: Use the following: click, hasClass, removeClass, addClass, and an if-else clause
   $("#sidebar-button").click(function() {
     if ($(".sidebar-container").hasClass("sidebar-active")) {
@@ -52,10 +74,10 @@ $(document).ready(function() {
       $("#sidebar-button").addClass("button-active");
       $(".sidebar-container").addClass("sidebar-active");
       $(".page-wrapper").addClass("wrapper-active");
-      // the following is a bit more challenging
-      // setTimeout(function() {
-      // $("body").addClass("no-scroll");
-      // }, 300);
+      // the following is a bit more challenging but gets rid of a bug with scrolling
+      setTimeout(function() {
+      $("body").addClass("no-scroll");
+      }, 300);
     }
   });
 
@@ -68,9 +90,10 @@ $(document).ready(function() {
     }
   });
 
-  //ACTIVITY 5: Make the sidebar links scroll to the correct area of the page
+  //ACTIVITY 6: Make the sidebar links scroll to the correct area of the page
   // Can use scrollTop function after clicking
   // Or, for smooth scrolling, can use the animate function which takes in two parameters - one for the function, and one for the time it animates over
+
   $("#home-link").click(function() {
     $("html, body").animate({ scrollTop: 0 }, 300);
     return false;
@@ -93,7 +116,7 @@ $(document).ready(function() {
   //
   // get the number of pixels and add 960
   //
-  // Utilize google!
+  // Google jQuery functions!
 
   $("#carousel-next").click(function() {
     var margin = parseInt($('#carousel').css('margin-left').replace("px", ""));
