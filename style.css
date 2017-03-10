@@ -1,0 +1,246 @@
+body, html {
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	min-width: 960px;
+	background-color: black;
+	-webkit-font-smoothing: antialiased;
+	-o-font-smoothing: antialiased;
+	font-smoothing: antialiased;
+	font-family: 'Cabin Sketch';
+}
+
+#sidebar-button {
+	position: fixed;
+	z-index: 100;
+	left: 15px;
+	top: 15px;
+	cursor: pointer;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+a {
+	text-decoration: none;
+}
+#nav-toggle {
+	position: absolute;
+	left: 50%; top: 50%;
+	padding: 10px 30px 15px 0px;
+}
+#nav-toggle span, #nav-toggle span:before, #nav-toggle span:after {
+	height: 3px;
+	width: 30px;
+	background: #fff;
+	position: absolute;
+	display: block;
+	content: '';
+}
+#nav-toggle span:before {
+	top: -10px;
+}
+#nav-toggle span:after {
+	bottom: -10px;
+}
+.sidebar-container ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 10px;
+}
+.sidebar-container {
+	position: fixed;
+	width: 280px;
+	height: 100%;
+	background-color: black;
+	transform: translateX(-280px);
+	-webkit-transform: translateX(-280px);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.sidebar-item {
+	font-weight: 700;
+	font-size: 16px;
+	color: white;
+	padding: 15px 20px;
+  cursor:pointer;
+	-moz-transition: all .3s;
+	-o-transition: all .3s;
+	transition: all .3s;
+}
+.sidebar-item:hover {
+  color:gray;
+}
+
+/* Page Content */
+.page-wrapper {
+	height: 100%;
+	width: 100%;
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+.section {
+	width: 100%;
+	height: 700px;
+	position: relative;
+}
+#header-section {
+	background-color: cornflowerblue;
+  height: 500px;
+  text-align: center;
+}
+#miscellaneous-section {
+  background-color: lightblue;
+}
+#carousel-section {
+	background-color: gray;
+}
+#footer-section {
+  background-color: lightblue;
+  height: 30px;
+}
+
+/*Header Section*/
+.text {
+	position: absolute;
+	font-size: 36px;
+	color: white;
+	font-weight: 700;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+ 	transform: translateX(-50%) translateY(-50%);
+	-webkit-transition: all .3s;
+	-moz-transition: all .3s;
+	transition: all .3s;
+}
+
+/*Miscellaneous Section*/
+.instructions {
+  margin: 0 auto;
+  padding-top: 100px;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.box {
+  position: absolute;
+  border: 3px solid white;
+  z-index: 100;
+  background: gray;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	transition: all 1s;
+  margin: 20px 40px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+ 	transform: translateX(-50%) translateY(-50%);
+  overflow: hidden;
+}
+#box1 {
+  top: 400px;
+  left: 15%;
+}
+#box2 {
+  top: 400px;
+  left: 30%;
+}
+#box3 {
+  top: 400px;
+  left: 45%;
+}
+#box4 {
+  top: 400px;
+  left: 60%;
+}
+#box5 {
+  top: 400px;
+  left: 75%;
+}
+.box-shifted {
+  top:500px;
+}
+/* Add CSS classes for jQuery here!*/
+
+/*Carousel Section*/
+.carousel-container {
+	width: 960px;
+	margin: 0 auto;
+	height: 700px;
+	overflow: hidden;
+	position: relative;
+}
+#carousel {
+	width: 4800px;
+	height: 100%;
+	margin-left: 0px;
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	-o-transition: all .5s;
+	transition: all .5s;
+}
+.carousel-item {
+	width: 960px;
+  float: left;
+	position: relative;
+	height: 100%;
+}
+.carousel-item img {
+  height: 700px;
+}
+#carousel-prev {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    left: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+}
+#carousel-next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 60px;
+    top: 50%;
+    margin-top: -30px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    -webkit-transition: all 0.3s;
+}
+.arrow {
+	width: 100%;
+	height: 100%;
+}
+
+/* jQuery Manipulation Classes */
+.no-scroll {
+	overflow: hidden;
+}
+
+.wrapper-active, .button-active {
+	-webkit-transform: translateX(200px);
+	-moz-transform: translateX(200px);
+	transform: translateX(200px);
+}
+
+.sidebar-active {
+	-webkit-transform: translateX(0px);
+	-moz-transform: translateX(0px);
+	-o-transform: translateX(0px);
+}
