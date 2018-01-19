@@ -89,7 +89,7 @@ a {
 	position: relative;
 }
 #header-section {
-	background-color: cornflowerblue;
+  background-color: cornflowerblue;
   height: 500px;
   text-align: center;
 }
@@ -104,7 +104,7 @@ a {
   height: 30px;
 }
 
-/*Header Section*/
+/* Header Section*/
 .text {
 	position: absolute;
 	font-size: 36px;
@@ -120,7 +120,7 @@ a {
 	transition: all .3s;
 }
 
-/*Miscellaneous Section*/
+/* Miscellaneous Section*/
 .instructions {
   margin: 0 auto;
   padding-top: 100px;
@@ -162,6 +162,13 @@ a {
 #box5 {
   left: 75%;
 }
+#showbox4{
+  left: 60%;
+  top: 70%;
+  height: 30px;
+  visibility: hidden;
+  font-size: 22px;
+}
 .box-color {
   background-color: pink;
 }
@@ -170,7 +177,7 @@ a {
 }
 /* Add CSS classes for jQuery here!*/
 
-/*Carousel Section*/
+/* Carousel Section */
 .carousel-container {
 	width: 960px;
 	margin: 0 auto;
